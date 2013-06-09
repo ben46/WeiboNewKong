@@ -1,0 +1,26 @@
+﻿{
+  "appName": {
+    "message": "微博新控",
+    "description": "App name."
+  },
+  
+  "appDesc": {
+    "message": "自定义你的新浪微博界面. 可以根据需要去除页面上大部分元素, 内容过滤系统帮助屏蔽指定用户, 桌面提醒功能让你不错过任何好友更新, 微博新控让你的新浪微博变得更加简洁!", 
+    "description":"App description."
+  },
+  
+  "appVersion": {
+	"message": "2.1.6", 
+    "description":"App version."
+  },
+  
+  "appChangelog": {
+	"message": "+ 增加【消息提醒】-【播放提示音】<br/>+ 增加【右侧边栏】-【隐藏微刊】<br/>+ 重新启用【消息过滤】-【过滤用户】（官方过滤系统非微博会员只能过滤5个）<br/>* 修复【右侧边栏】-【隐藏会员专区】<br/>* 更新至Manifest v2<br/>- 移除【阅读模式】-【自动启用阅读模式】<br/>", 
+    "description":"App changelog."
+  },
+  
+  "appReleaseDate": {
+	"message": "2012-09-22", 
+    "description":"App release date."
+  }
+}

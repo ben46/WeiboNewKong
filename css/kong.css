@@ -1,0 +1,206 @@
+/********************************
+Copyright (c) 2011~2012 Min Zhang
+http://code.google.com/p/wei-bo-kong/
+License: LGPL v2.1
+********************************/
+#kong_title {
+	text-align: center;
+	font-weight: bold;
+}
+
+#kong_date {
+	text-align: right;
+}
+
+#kong_func {
+	position: fixed;
+	bottom:5px;
+	right: 55px;
+}
+/*
+.kong_reading_button {
+	position: fixed;
+	top: 0px;
+	left: 10px;
+	z-index: 99998;
+	font-color: white;
+	width: 100px;
+	height: 20px;
+	padding: 10px;
+}
+*/
+.kong_gotop_button {
+	position: absolute;
+	right: 0px;
+	z-index: 99999;
+}
+
+.kong_read {
+	position: absolute;
+	z-index: 9997;
+	left: 0px;
+	top: 0px;
+	background-color: #EEE;
+}
+.kong_mask {
+	position: absolute;
+	z-index: 9997;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: #000;
+	opacity: 0.60;
+}
+
+.kong_current_item {
+	border-left: 2px solid #4d90fe;
+}
+
+.kong_hr {
+	border: 1px dashed grey;
+}
+
+.kong_expand {
+	margin-left: 10px;
+	color: black;
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.kong_button_left {
+	border-top-left-radius: 2px;
+	-moz-border-top-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-moz-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	border-left-width: 1px;
+	-webkit-transition: border-color .218s;
+	position: relative;
+	display: inline-block;
+	border-spacing: 2px;
+	border-collapse: collapse;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-right: 0px solid rgba(0, 0, 0, 0.1);
+	border-top-color: rgba(0, 0, 0, 0.1);
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: default;
+	width: 80px;
+	height:20px;
+	outline: none;
+	cursor:pointer;
+}
+
+.kong_button_middle {
+	border-left-width: 1px;
+	-o-transition: border-top-color 0.218s,border-right-color 0.218s,border-bottom-color 0.218s,border-left-color .218s;
+	-webkit-transition: border-color .218s;
+	position: relative;
+	display: inline-block;
+	border-spacing: 2px;
+	border-collapse: collapse;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-top-color: rgba(0, 0, 0, 0.1);
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: default;
+	width: 80px;
+	height:20px;
+	outline: none;
+	cursor:pointer;
+}
+
+.kong_button {
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-left-width: 1px;
+	-o-transition: border-top-color 0.218s,border-right-color 0.218s,border-bottom-color 0.218s,border-left-color .218s;
+	-webkit-transition: border-color .218s;
+	position: relative;
+	display: inline-block;
+	border-spacing: 2px;
+	border-collapse: collapse;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-top-color: rgba(0, 0, 0, 0.1);
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: default;
+	outline: none;
+	cursor:pointer;
+	font-family: Arial,Helvetica,sans-serif;
+	padding: 0px 5px;
+	font-size: 12px;
+	height:20px;
+	width: 80px;
+}
+
+.kong_button_right {
+	border-top-right-radius: 2px;
+	-moz-border-top-right-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-left-width: 1px;
+	-o-transition: border-top-color 0.218s,border-right-color 0.218s,border-bottom-color 0.218s,border-left-color .218s;
+	-webkit-transition: border-color .218s;
+	position: relative;
+	display: inline-block;
+	border-spacing: 2px;
+	border-collapse: collapse;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-top-color: rgba(0, 0, 0, 0.1);
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: default;
+	outline: none;
+	width: 120px;
+	height:20px;
+	cursor:pointer;
+}
+
+.kong_button_hover {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));
+	border-color: #2f5bb7!important;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.kong_button_grey {
+	background: -webkit-gradient(linear,0% 40%,0% 70%,from(#f5f5f5),to(#f1f1f1));
+	color: #666;
+}
+
+.kong_button_blue {
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#4D90FE),to(#4787ED));
+	color: white;
+}
+
+.kong_button_original {
+}
+
+.kong_button_hover_grey {
+	border-color: #939393!important;
+	font-weight:bold;
+}
+
+.kong_button_hover_blue {
+	border-color: #2f5bb7!important;
+	font-weight:bold;
+}
+
+.kong_button_hover_original {
+	font-weight:bold;
+}

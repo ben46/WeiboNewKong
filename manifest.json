@@ -1,0 +1,37 @@
+{
+	"name": "__MSG_appName__",
+	"manifest_version": 2,
+	"version": "2.1.6",
+	"description": "__MSG_appDesc__",
+	"default_locale": "zh_CN",
+	"options_page": "options.html",
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "微博新控",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "img/icon/icon_16.png",
+		"48": "img/icon/icon_48.png",
+		"96": "img/icon/icon_96.png",
+		"128": "img/icon/icon_128.png"
+	},
+	"permissions": [
+		"http://weibo.com/",
+		"http://www.weibo.com/",
+		"tabs",
+		"notifications"
+	],
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [
+    {
+      "matches": ["http://weibo.com/*", "http://www.weibo.com/*"],
+	  "css": ["css/kong.css"],
+      "js": ["jquery.min.js", "Weibo.user.js"],
+	  "run_at": "document_idle",
+	  "all_frames": true
+    }
+  ]
+}
