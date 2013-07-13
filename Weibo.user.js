@@ -24,23 +24,6 @@ var DATE = chrome.i18n.getMessage("appReleaseDate");
 /*popup images*/
 function hoverimg()
 {
-
-	$(".photo").each( function (){
-		$(this).hover(function(){
-			var x = event.clientX + document.body.scrollLeft;
-			var y = event.clientY + document.body.scrollTop;
-			$("#kong_hover_img").attr( "src", $(this).attr( "src" ).replace( "mw205", "mw690"  ) );
-			$("#kong_hover_img").css( "top", "40px" );
-			$("#kong_hover_img").css( "right", "100px" );
-			$("#kong_hover_img").css( "position", "fixed" );
-			$("#kong_hover_img").css( "border", "3px solid white" );
-			$("#kong_hover_img").show();
-		},function(){
-			$("#kong_hover_img").hide();
-		});
-	});
-
-
 	$(".bigcursor").each( function (){
 		$(this).hover(function(){
 			var x = event.clientX + document.body.scrollLeft;
@@ -67,33 +50,6 @@ function hover(img,x,y) {
 	hover.style.display = "block";
 }
 
-function unhover() {
-	var hover = document.getElementById("hover");
-	hover.style.display = "none";
-}
-
-
-//Add reading indicator to reading mode
-//TODO fix display bugs, not cool right now
-function reading_indicator() {
-	$('dl[action-type="feed_list_item"]').each( function (){
-		$(this).hover(function(){
-			$(this).addClass( "kong_current_item" );
-		},function(){
-			$(this).removeClass( "kong_current_item" );
-		});
-	});
-	t = setTimeout(function(){reading_indicator();}, 2000 );
-}
-
-// notification: blink title
-function blink_info(msg) {
-	for (i=0;i<15;i++) {
-		timer = setTimeout("", 1000);
-		document.title = document.title == msg ? '【您有新消息】' : msg;
-	}
-}
-
 // entry function
 // check update -> init -> main page -> other page
 function doit(options) {
@@ -108,9 +64,14 @@ function doit(options) {
 		 $(document).attr('title').match("我的收藏") || $(document).attr('title').match("我的收藏") ||
 		 $(document).attr('title').match("新浪微博") 
 	){
-		$("<style type='text/css'> .kong_button_original { color:" + $('.MIB_linkbl > a').css("color") + "; } </style>").appendTo("head");
+	
 		$("<div><img id=\"kong_hover_img\" /></div>").appendTo("body");
 		hoverimg();
+	} else if ( $(document).attr('title').match("相册") ){
+		$("<div><img id=\"kong_hover_img\" /></div>").appendTo("body");
+
+		// alert("options");
+
 	}
 
 
