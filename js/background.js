@@ -81,5 +81,5 @@ function onRequest(request, sender, callback) {
 		popup.show();
 	}
 };
-chrome.extension.onRequest.addListener(onRequest);
-chrome.tabs.onUpdated.addListener(showPageAction);
+// chrome.extension.onRequest.addListener(onRequest);
+// chrome.tabs.onUpdated.addListener(showPageAction);

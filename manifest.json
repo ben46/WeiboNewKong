@@ -17,8 +17,8 @@
 		"128": "img/icon/icon_128.png"
 	},
 	"permissions": [
-		"http://weibo.com/",
-		"http://www.weibo.com/",
+		"http://*/*",
+        "https://*/*",
 		"tabs",
 		"notifications"
 	],
@@ -27,7 +27,7 @@
 	},
 	"content_scripts": [
     {
-      "matches": ["http://weibo.com/*", "http://www.weibo.com/*"],
+      "matches": ["http://*.weibo.com/*", "http://www.weibo.com/*"],
 	  "css": ["css/kong.css"],
       "js": ["jquery.min.js", "Weibo.user.js"],
 	  "run_at": "document_idle",
