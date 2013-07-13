@@ -22,15 +22,17 @@
 		"tabs",
 		"notifications"
 	],
+	/*
 	"background": {
 		"page": "background.html"
 	},
+	*/
 	"content_scripts": [
     {
       "matches": ["http://*.weibo.com/*", "http://www.weibo.com/*"],
 	  "css": ["css/kong.css"],
       "js": ["jquery.min.js", "Weibo.user.js"],
-	  "run_at": "document_idle",
+	  "run_at": "document_idle", // 网页加载结束前
 	  "all_frames": true
     }
   ]
