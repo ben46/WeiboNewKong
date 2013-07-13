@@ -41,14 +41,7 @@ function hoverimg()
 	t = setTimeout(function(){hoverimg();}, 2000 );
 }
 
-function hover(img,x,y) {
-	var hover = document.getElementById("hover");
-	hover.style.position = "fixed";
-	hover.style.top = x;
-	hover.style.left = y;
-	hover.innerHTML = "<img src=img/" + img + ".jpg />";
-	hover.style.display = "block";
-}
+
 
 // entry function
 // check update -> init -> main page -> other page
@@ -62,7 +55,7 @@ function doit(options) {
 		 $(document).attr('title').match("发出的评论") || $(document).attr('title').match("我的評論") ||
 		 $(document).attr('title').match("我的私信") || $(document).attr('title').match("我的私人訊息") ||
 		 $(document).attr('title').match("我的收藏") || $(document).attr('title').match("我的收藏") ||
-		 $(document).attr('title').match("新浪微博") 
+		 $(document).attr('title').match("新浪微博") || $(document).attr('title').match("热门微博")
 	){
 	
 		$("<div><img id=\"kong_hover_img\" /></div>").appendTo("body");
